@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   become: true
-  remote_user: cianhatton
+  sudo_user: cianhatton
   roles:
     - name: install_packages
     - name: setup_vim
