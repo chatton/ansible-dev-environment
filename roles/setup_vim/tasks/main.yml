@@ -1,0 +1,6 @@
+---
+- name: Copy .vimrc
+  ansible.builtin.file:
+    src: vimrc
+    dest: "{{ ansible_env.HOME }}/.vimrc"
+    mode: 0750

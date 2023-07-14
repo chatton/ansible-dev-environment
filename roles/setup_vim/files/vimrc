@@ -1,0 +1,5 @@
+" enable syntax highlighting
+:syntax on
+
+" specify md as markdown files.
+autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc

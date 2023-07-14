@@ -4,3 +4,5 @@ packages:
   - tmux
   - vim
   - npm
+  - git
+  - fzf
