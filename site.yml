@@ -4,3 +4,4 @@
   roles:
     - name: install_packages
     - name: setup_vim
+    - name: setup_git
