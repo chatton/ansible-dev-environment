@@ -2,7 +2,7 @@
 - name: Copy vimrc.
   ansible.builtin.copy:
     src: vimrc
-    dest: "/home/{{ main_user }}/.vimrc"
+    dest: "/home/{{ vim_user }}/.vimrc"
     group: "{{ vim_group }}"
     owner: "{{ vim_user }}"
     mode: 0644
