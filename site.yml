@@ -1,8 +1,12 @@
 ---
 - hosts: localhost
   become: true
-  become_user: cianhatton
+#  become_user: cianhatton
   roles:
     - name: install_packages
+
+- hosts: localhost
+  become: false
+  roles:
     - name: setup_vim
     - name: setup_git
