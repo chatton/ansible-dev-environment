@@ -1,0 +1,11 @@
+---
+- name: Update Packages
+  ansible.builtin.apt:
+    upgrade: dist
+    update_cache: true
+
+- name: Install desired packages
+  ansible.builtin.apt:
+    pkg:
+    - foo
+    - foo-tools

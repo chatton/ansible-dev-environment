@@ -1,6 +1,4 @@
 ---
 - hosts: localhost
-  tasks:
-  - name: Hello world.
-    ansible.builtin.debug:
-      msg: "Hello World!"
+  roles:
+    - install_packages
