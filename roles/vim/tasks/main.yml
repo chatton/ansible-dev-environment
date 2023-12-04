@@ -1,10 +1,11 @@
 ---
-#- name: Update Packages
-#  ansible.builtin.apt:
-#    upgrade: dist
-#    cache_valid_time: 3600
-
-- name: Install vim packages
+- name: Install vim package.
   ansible.builtin.apt:
     pkg:
       - vim
+
+- name: Copy vimrc.
+  ansible.builtin.copy:
+    src: vimrc
+    dest: /home/cianhatton/.vimrc
+    mode: '0644'
