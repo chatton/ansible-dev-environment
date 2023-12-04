@@ -1,4 +1,7 @@
 ---
-- hosts: localhost
+- name: Setup Dev Environment
+  hosts: localhost
+  become: yes
+  become_user: cianhatton
   roles:
     - configure_git

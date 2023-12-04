@@ -1,4 +1,15 @@
 ---
+#- name: Update Packages
+#  ansible.builtin.apt:
+#    upgrade: dist
+#    cache_valid_time: 3600
+#
+#- name: Install gh package
+#  ansible.builtin.apt:
+#    pkg:
+#      - gh
+
+
 - git_config:
     name: core.editor
     scope: global
