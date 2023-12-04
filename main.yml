@@ -1,4 +1,4 @@
 ---
 - hosts: localhost
   roles:
-    - install_packages
+    - configure_git

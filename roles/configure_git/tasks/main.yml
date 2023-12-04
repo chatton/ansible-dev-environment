@@ -1,11 +1,15 @@
 ---
-- name: Update Packages
-  ansible.builtin.apt:
-    upgrade: dist
-    update_cache: true
+- git_config:
+    name: core.editor
+    scope: global
+    value: vim
 
-- name: Install desired packages
-  ansible.builtin.apt:
-    pkg:
-    - foo
-    - foo-tools
+- git_config:
+      name: user.name
+      scope: global
+      value: chatton
+
+- git_config:
+      name: user.email
+      scope: global
+      value: github.qpeyb@simplelogin.fr
