@@ -25,7 +25,7 @@
       scope: global
       value: github.qpeyb@simplelogin.fr
 
-- name: Insert/Update "Match User" configuration block in /etc/ssh/sshd_config prepending and appending a new line
+- name: Enforce using ssh instead of https with github.
   ansible.builtin.blockinfile:
     path: ~/.gitconfig
     append_newline: true
