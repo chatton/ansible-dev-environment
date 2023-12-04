@@ -1,6 +1,0 @@
----
-packages:
-  - sudo
-  - tmux
-  - vim
-  - npm

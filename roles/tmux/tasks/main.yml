@@ -1,0 +1,11 @@
+---
+- name: Install tmux packages
+  ansible.builtin.apt:
+    pkg:
+    - tmux
+
+- name: Copy tmux conf.
+  ansible.builtin.copy:
+    src: tmux.conf
+    dest: /home/cianhatton/.tmux.conf
+    mode: '0644'

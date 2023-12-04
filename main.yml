@@ -2,6 +2,7 @@
 - name: Setup Dev Environment
   hosts: localhost
   become: yes
-  become_user: cianhatton
+  become_user: root
   roles:
-    - configure_git
+    - git
+    - tmux

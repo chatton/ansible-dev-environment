@@ -1,0 +1,10 @@
+---
+#- name: Update Packages
+#  ansible.builtin.apt:
+#    upgrade: dist
+#    cache_valid_time: 3600
+
+- name: Install vim packages
+  ansible.builtin.apt:
+    pkg:
+      - vim
