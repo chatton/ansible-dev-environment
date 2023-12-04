@@ -24,3 +24,13 @@
       name: user.email
       scope: global
       value: github.qpeyb@simplelogin.fr
+
+- name: Insert/Update "Match User" configuration block in /etc/ssh/sshd_config prepending and appending a new line
+  ansible.builtin.blockinfile:
+    path: ~/.gitconfig
+    append_newline: true
+    prepend_newline: true
+    block: |
+      [url "ssh://git@github.com/"]
+        insteadOf = https://github.com/
+
