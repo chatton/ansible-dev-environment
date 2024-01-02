@@ -1,0 +1,26 @@
+ #!/usr/bin/env bash
+
+# https://github.com/chatton/dotfiles/blob/master/.bash_profile
+
+ # enable fzf with reverse search
+ [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+function _setup_go() {
+    source /home/cianhatton/.gvm/scripts/gvm
+    gvm use go1.21
+}
+
+# gh pr list | fzf | awk '{print $1}' | gh pr view --web
+function _parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# display git branch in the terminal prompt
+export PS1='\[\e[1;91m\][\w]\[\e[0m\]\[\e[32m\]$(_parse_git_branch)\[\e[00m\]$ '
+
+
+function setup() {
+    ansible-playbook /home/cianhatton/checkouts/ansible-dev-environment/main.yml
+}
+
+_setup_go

@@ -1,0 +1,6 @@
+---
+- name: Copy tmux conf.
+  ansible.builtin.copy:
+    src: bash_profile
+    dest: /home/cianhatton/.bash_profile
+    mode: '0644'
